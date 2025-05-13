@@ -29,7 +29,7 @@
         <!-- Kiểm tra trạng thái đăng nhập -->
         <li v-if="isLoggedIn" class="dropdown">
           <a href="#" class="dropdown-toggle" style="color: #333;" data-bs-toggle="dropdown" aria-expanded="false">
-            <font-awesome-icon :icon="['fas', 'circle-user']" /> {{ username }}
+            <font-awesome-icon :icon="['fas', 'circle-user']" /> {{  }}
           </a>
           <ul class="dropdown-menu">
             <li><router-link to="/trang-ca-nhan" class="dropdown-item text-black  mx-auto"><font-awesome-icon
