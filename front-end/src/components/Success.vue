@@ -1,17 +1,16 @@
 <template>
-  <div v-if="order" class="container d-flex flex-column justify-content-center align-items-center" style="height: 100vh; text-align: center;">
+  <div v-if="order" class="container d-flex flex-column justify-content-center align-items-center"
+    style="height: 100vh; text-align: center;">
     <div class="status-icon mb-4">
-      <font-awesome-icon 
+      <font-awesome-icon
         :icon="status === '00' || status === '0' ? ['far', 'circle-check'] : ['fas', 'triangle-exclamation']"
-        :class="status === '00' || status === '0' ? 'text-success' : 'text-danger'" 
-        style="font-size: 120px;" 
-      />
+        :class="status === '00' || status === '0' ? 'text-success' : 'text-danger'" style="font-size: 120px;" />
     </div>
     <h2 class="status-message fw-bold">
       {{ status === '00' || status === '0' ? 'Thanh toán thành công!' : 'Thanh toán thất bại' }}
     </h2>
     <p class="status-description mt-3 text-secondary">
-      {{ status === '00' ? 'Cảm ơn bạn đã đặt hàng. Đơn hàng của bạn đã được xử lý.' : 'Đã xảy ra lỗi khi xử lý thanh toán. Vui lòng thử lại sau.' }}
+      {{ status === '00' ? 'Cảm ơn bạn đã đặt hàng. Đơn hàng của bạn đã được xử lý.' : 'Đã xảy ra lỗi khi xử lý thanh toán.Vui lòng thử lại sau.' }}
     </p>
     <div class="action-buttons mt-4">
       <router-link to="/san-pham" class="btn btn-outline-danger me-3 d-flex align-items-center">
@@ -91,9 +90,12 @@ const clearCart = async () => {
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
